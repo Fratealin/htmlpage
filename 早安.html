@@ -6,13 +6,21 @@
     <title>早安</title>
 	<style>
         body {
-            background-image: url('https://en.wikipedia.org/wiki/Erhai_Lake#/media/File:Erhai_lake,_Yunnan,_China.jpg');
+            background-image: url('erhai.png');
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
+            background-color: rgba(0, 0, 0, 0.5); /* 背景顏色和透明度 */
+            background-blend-mode: overlay; /* 混合模式 */
+        display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
         }
-        h1, p {
-            color: black;
+        .content {
+            text-align: center;
+            color: white;
         }
     </style>
 </head>
