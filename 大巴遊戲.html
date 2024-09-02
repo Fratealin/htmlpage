@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <title>大巴遊戲</title>
+
+</head>
+
+<body>
+
+  <h1>杜守謙 和 小璐璐 的
+    大巴遊戲
+  </h1>
+
+  <p style="font-size:60px">準備<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+    
+  </body>
+  </html></p>
+
+  <button id="generateButton"style="font-size:40px">按鈕</button>
+
+  <script>
+
+    // Define an array of words
+  
+    const words = ['睡覺', '起來', '打哈欠', '伸懶腰', '拉伸','深蹲', '做菜', '掃地', '割草', '刷牙', '梳理頭髮', '洗漱', '洗澡', '繫鞋帶', '遛狗', '看書', '滑雪', '吃', '喝', '打哈欠', '寫字',"飛機","枕頭", "雪", "水", "河", "聖經", "護髮素", "維生素",'香水', '厕所', '洗发水', '耳机', '雨伞', '镜子', '钢琴', '长笛', '牙刷', '牙膏', '筷子', '麵條', '擀麵', '气球', '洗衣机', '书包', '冰淇淋', '电风扇', '床', '吹风机', '猴子', '大象', '袋鼠', '蛇螃蟹', '蛋糕', '香烟', '枕头', '舞蹈演员', '歌唱者', '香槟', '电话', '老虎', '兔子', '汉堡', '乞丐', '吉他', '钥匙', '机器人', '门铃', '手机', '企鹅', '芭蕾舞', '吃西瓜', '吃香蕉', '开汽车', '打喷嚏', '冲浪', '照相', '亲吻', '骑自行车', '下蛋', '牙痛', '放风筝', '化妆', '拍掌 ', '洗衣服', '疯狂的', '热的', '冷的', '渴的', '困的', '焦虑的', '生气的', '美味的', '生病的', '臭的', "乒乓球","高爾富球","游泳","籃球","足球","網球","羽毛球","鴨子","雞", '鱷魚', '貓', '狗', '蛇', '魚', '牛', '馬', '兔子', '鳥', '猴子', '長頸鹿', '獅子', '豬', '跑步', '慢動作跑','跳舞','跳','引體向上','拉鍊','堵車','打開雨傘壞了'];
+  
+  
+  
+    // Get a reference to the button element
+  
+    const generateButton = document.getElementById("generateButton");
+  
+  
+  
+    // Function to generate a random word
+  
+    function generateRandomWord() {
+  
+      const randomIndex = Math.floor(Math.random() * words.length);
+  
+      const randomWord = words[randomIndex];
+  
+      document.querySelector("p").textContent = `${randomWord}`;
+  
+    }
+  
+  
+  
+    // Attach an event listener to the button
+  
+    generateButton.addEventListener("click", generateRandomWord);
+  
+  </script>
+
+</body>
+
+</html>

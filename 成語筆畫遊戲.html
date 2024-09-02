@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <title>成語筆畫遊戲</title>
+
+</head>
+
+<body>
+
+  <h1>我在筆畫甚麼成語?....
+  </h1>
+
+  <p style="font-size:60px">準備<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+    
+  </body>
+  </html></p>
+
+  <button id="generateButton"style="font-size:40px">按鈕</button>
+
+  <script>
+
+    // Define an array of words
+  
+    const words = ['單山蘸水','捆太蘸水','喜洲巴巴','亂七八糟','班門弄斧','一舉兩得','對牛彈琴','打草驚蛇','措手不及','同舟共濟','不可思意','一日千里','五體投地','小題大作','大驚小怪','海底撈針','車水馬龍','不謀而合','哭笑不得','酸甜苦辣','目瞪口呆','如魚得水','拭目一待','擦肩而過','光屁屁','捏屁屁'];
+  
+  
+  
+    // Get a reference to the button element
+  
+    const generateButton = document.getElementById("generateButton");
+  
+  
+  
+    // Function to generate a random word
+  
+    function generateRandomWord() {
+  
+      const randomIndex = Math.floor(Math.random() * words.length);
+  
+      const randomWord = words[randomIndex];
+  
+      document.querySelector("p").textContent = `${randomWord}`;
+  
+    }
+  
+  
+  
+    // Attach an event listener to the button
+  
+    generateButton.addEventListener("click", generateRandomWord);
+  
+  </script>
+
+</body>
+
+</html>

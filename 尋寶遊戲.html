@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <title>尋寶遊戲</title>
+
+</head>
+
+<body>
+
+  <h1>拿給我一個....
+  </h1>
+
+  <p style="font-size:60px">準備<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+    
+  </body>
+  </html></p>
+
+  <button id="generateButton"style="font-size:40px">按鈕</button>
+
+  <script>
+
+    // Define an array of words
+  
+    const words = ['紅色的東西','彩色的東西','藍色的東西','綠色的東西','白綠色的東西','黑色的東西','灰色的東西','黃色的東西','可以吃的東西','可愛的東西','臭的東西','一粒灰塵','襪子','我沒有的東西','新的東西','最小的東西','潤腐乳','最老的東西','最重的東西','最輕的東西','透明的東西','一雙','兩個一模一樣的東西'];
+  
+  
+  
+    // Get a reference to the button element
+  
+    const generateButton = document.getElementById("generateButton");
+  
+  
+  
+    // Function to generate a random word
+  
+    function generateRandomWord() {
+  
+      const randomIndex = Math.floor(Math.random() * words.length);
+  
+      const randomWord = words[randomIndex];
+  
+      document.querySelector("p").textContent = `${randomWord}`;
+  
+    }
+  
+  
+  
+    // Attach an event listener to the button
+  
+    generateButton.addEventListener("click", generateRandomWord);
+  
+  </script>
+
+</body>
+
+</html>
