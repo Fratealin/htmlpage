@@ -4,45 +4,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>早安</title>
-	<style>
+    <style>
         body {
-            background-image: url('erhai.png');
+            background-image: url('1.png');
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
-            
+            background-position: center; /* 確保背景圖片居中顯示 */
             background-blend-mode: overlay; /* 混合模式 */
-        }
-        h1, p {
-		font-family: 'KaiTi', 'DFKai-SB', serif; /* 楷體字體 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'KaiTi', 'DFKai-SB', serif; /* 楷體字體 */
             color: white;
+            text-align: center;
         }
-		h1 {
-		font-size: 50px;
-		}
-		p, button {
-		font-size: 25px;
-		
-		}
-		button {
-		font-family: 'KaiTi', 'DFKai-SB', serif; /* 楷體字體 */
-		}
+        #container {
+            text-align: center;
+        }
+        h1 {
+            font-size: 50px;
+        }
+        p, button {
+            font-size: 25px;
+        }
+        button {
+            font-family: 'KaiTi', 'DFKai-SB', serif; /* 楷體字體 */
+        }
+        #story {
+            font-size: 30px;
+            margin-bottom: 20px;
+            color: white;
+			background-color: rgba(0, 0, 0, 0.5); /* 黑色背景，50%透明度 */
+        }
     </style>
 </head>
 <body>
-    <h1>寶貝早安</h1>
-    <p>我今天下班後出去走走再做泡菜</p>
-	<p>希望妳今天睡的好</p>
-	<p>晚安</p>
-	<button onclick="window.location.href='https://yunnan.netlify.app/小璐璐语言培训.html';">點擊我</button>
-	<button onclick="window.location.href='https://yunnan.netlify.app/大巴遊戲.html';">大巴遊戲</button>
-	<button onclick="window.location.href='https://yunnan.netlify.app/尋寶遊戲.html';">尋寶遊戲</button>
-	<button onclick="window.location.href='https://yunnan.netlify.app/成語筆畫遊戲.html';">成語筆畫遊戲</button>
-	</br>
-	<button onclick="window.location.href='https://www.youtube.com/watch?v=bBlGAUzcCvw';">今天的運動</button>
-	<button onclick="window.location.href='https://www.youtube.com/watch?v=2Gj-p71HLOk';">核心和拉伸</button>
-	
-	
-	
+    <div id="container">
+        <h1>寶貝早安</h1>
+        <div id="story">按下按鈕開始故事...</div>
+        <button onclick="nextSentence()">進行精彩故事</button>
+                      
+		<button onclick="changeBackground()">下一張照片</button>
+		</br>
+        <button onclick="window.location.href='https://yunnan.netlify.app/小璐璐语言培训.html';">點擊我</button>
+        <button onclick="window.location.href='https://yunnan.netlify.app/大巴遊戲.html';">大巴遊戲</button>
+        <button onclick="window.location.href='https://yunnan.netlify.app/尋寶遊戲.html';">尋寶遊戲</button>
+        <button onclick="window.location.href='https://yunnan.netlify.app/成語筆畫遊戲.html';">成語筆畫遊戲</button>
+        </br>
+        <button onclick="window.location.href='https://www.youtube.com/watch?v=bBlGAUzcCvw';">今天的運動</button>
+        <button onclick="window.location.href='https://www.youtube.com/watch?v=2Gj-p71HLOk';">核心和拉伸</button>
+    </div>
+
+    <script>
+        const story = [
+            "從前有一個小村莊",
+            "村莊裡住著一位老農夫",
+            "老農夫名叫杜守謙",
+            "杜守謙的朋友愛稱呼他小杜",
+            "寶貝早安!",
+			"你睡的好嗎?",
+			"有一天小杜在他常去的公園裡散步的時候",
+			"他看到了一個奇特的場景",
+			"他面前這個場景讓他暫時不相信他的眼睛",
+			"水池裡有一大群鴨子沉默的睡著",
+			"小杜好奇的看著鴨子的時候",
+			"其中一個抬起頭往他看了看,說...",
+			"哇哇哇!",
+			"然後繼續把頭埋在溫暖的翅膀裡繼續睡",
+			"小杜繼續一邊走一邊琢磨剛才發生的事情",
+			"回到農家後老農夫急忙的準備了麻不辣炒羽衣甘藍,韭菜雞蛋和泡菜的大餐",
+			"他特別享受麻不辣炒羽衣甘藍的味道,就是對老農夫的牙齒來說微微硬一些",
+			"老農夫一邊吃一邊回想著剛才在公園裡看到的兩個快跑狗一起比賽",
+			"賽狗跑的極快",
+			"腳步的聲音很大",
+			"真令人感受到他們應有的刺激感",
+			"老農夫不得不一直回頭希望賽狗再跑一次給他看",
+			"突然小杜從白夢中醒了過來,看到了眼前的",
+			"一大堆的碗盤等待他處理",
+			"洗碗後準備第二天早餐的饅頭麵團",
+			"寫完了日記後半睡半醒的走向房間準備",
+			"從前有一個小村莊",
+			"目前有一個小村莊",
+			"小村莊睡著一位老農夫",
+			"寶貝晚安,希望妳睡的平安"
+        ];
+        let index = 0;
+
+        function nextSentence() {
+            document.getElementById("story").innerText = story[index];
+            index = (index + 1) % story.length;
+        }
+		
+		const backgrounds = [
+            'url("1.png")',
+			'url("2.png")',
+            'url("3.png")'
+        ];
+        let bgIndex = 0;
+
+        function changeBackground() {
+            bgIndex = (bgIndex + 1) % backgrounds.length;
+            document.body.style.backgroundImage = backgrounds[bgIndex];
+        }
+    </script>
 </body>
 </html>
